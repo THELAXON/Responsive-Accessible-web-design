@@ -1,0 +1,315 @@
+/* Resetting styles for all elements */
+* {
+    box-sizing: border-box;
+}
+
+/* Image styles */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Font styles for the entire document */
+html {
+    font-family: "Lucida Sans", sans-serif;
+}
+
+/* Navigation styles */
+#menu-bar {
+    text-align: center;
+    background-color: white;
+    overflow: hidden;
+}
+
+#menu-bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#menu-bar li {
+    display: inline-block;
+}
+
+#menu-bar li a {
+    display: block;
+    color: blue;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    outline: none;
+}
+
+/* Add a CSS rule to style the news-container */
+.news-article {
+    outline: 0.5px solid black; /* You can adjust the color and size as needed */
+    margin: 10px 0; /* Optional: Add some margin for better appearance */
+    padding: 10px; /* Optional: Add some padding for better appearance */
+}
+
+body {
+    margin: 0;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+#header img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+/* Footer styles */
+#footer {
+    background-color: #818589;
+    padding: 20px;
+}
+
+#footer-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-section {
+    width: 48%;
+}
+
+#footer h2,
+#footer li a {
+    color: white;
+}
+
+
+#footer ul {
+    list-style-type: none;
+    margin: 20px;
+    padding: 0;
+}
+
+
+
+#footer li a {
+    text-decoration: underline;
+    display: block;
+}
+
+#footer-images {
+    display: flex;
+    gap: 75px;
+    justify-content: flex-end;
+}
+
+#footer-images img {
+    max-width: 100%;
+}
+
+#footer-images img:first-child {
+    width: 20%;
+}
+
+#footer-images img:last-child {
+    width: 40%;
+}
+
+
+#mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    margin-left: 10px; /* Adds some space between the search bar and the button */
+}
+
+
+/* Style for the expanded content */
+.expanded-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+
+/* Style for the expand/collapse button */
+.toggle-button {
+    background-color: #B30000;
+    color: white;
+    padding: 8px;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+    display: block;
+    margin-top: 10px;
+}
+
+    
+@media screen and (min-width: 320px) and (max-width: 425px) {
+
+    #header {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Align items to the start (left) */
+        position: relative; /* Add relative positioning to the header */
+    }
+
+    #menu-bar {
+        margin-bottom: 10px; /* Add some space below the menu bar */
+    }
+    
+    .search {
+        width: 100%;
+        margin: 10px auto; /* Center horizontally using margin and auto */
+        position: relative; /* Change position to relative */
+        top: initial; /* Remove top positioning */
+        right: initial; /* Remove right positioning */
+        text-align: center; /* Center the text within the search box */
+    }
+
+
+    #menu-bar ul {
+        display: none;
+    }
+
+    #menu-bar li {
+        display: block;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    #menu-bar li a {
+        display: block;
+        color: blue;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        outline: none;
+    }
+
+    #mobile-menu-btn {
+        display: block;
+    }
+
+    #footer {
+        clear: both;
+        margin-top: 20px;
+    }
+
+    #footer-content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #footer-images img:first-child {
+        width: 80%;
+    }
+    
+    #footer-images img:last-child {
+        display:none;
+    }
+
+}
+
+@media screen and (min-width: 426px) {
+    .search {
+        position: absolute;
+        top: 0;
+        right: 0;
+        text-align: right; /* Align the text to the right within the search box */
+    }
+}
+
+
+
+
+/* Laptops (768px) and below */
+@media screen and (min-width: 426px) and (max-width: 768px) {
+    #footer {
+        clear: both;
+        margin-top: 20px;
+    }
+
+    #footer-content {
+        display: flex;
+        justify-content: space-between; /*Creates space inbetween the quicklinks and the images*/
+    }
+
+    #footer-images img:first-child {
+        width: 40%;           /*scales image based on resolution*/
+    }
+    
+    #footer-images img:last-child {
+        width: 40%;          /*scales image based on resolution*/
+    }
+
+}
+
+/* Laptops (1024px) and below */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    #news1 {
+        width: 100%; /* Set width to 100% for a single column layout */
+        margin-right: 0; /* Remove margin for a full-width layout */
+        float: none; /* Remove float for a stacked layout */
+        margin-bottom: 5px; /* Optional: Add margin at the bottom */
+    }
+
+    #news2, #news3 {
+        width: 48%; /* Set width to approximately 1/2 of the container */
+        box-sizing: border-box;
+        margin-right: 2%; /* Add some space between articles */
+        float: left; /* Float left to achieve side-by-side layout */
+        margin-bottom: 10px; /* Optional: Add margin at the bottom */
+        height: 810px; /* Set a fixed height for all boxes */
+    }
+
+    #footer {
+        clear: both;            /*Removes current footer styles*/
+        margin-top: 20px;       /* Adds spacing between the footer section and the articles above */
+    }
+
+    #footer-content {
+        display: flex;
+        justify-content: space-between; /*Creates space inbetween the quicklinks and the images*/
+    }
+
+    #footer-images img:first-child {
+        width: 30%;             /*scales image based on resolution*/
+    }
+    
+    #footer-images img:last-child {
+        width: 40%;             /*scales image based on resolution*/
+    }
+}
+
+/* Large Laptop/Desktop Styles (1025px to 1440px) */
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+    #news1, #news2, #news3 {
+        width: 32.33%; /* Set width to approximately 1/3 of the container so we can fit all three articles in the 1440px resolution*/
+        box-sizing: border-box;/* Applies the box-sizing property to the news articles making sure that padding and border as the mockup has borders around the articles.*/
+        margin-right: 1%; /* Add some space between articles */
+        float: left; /* Float left to achieve side-by-side layout */
+        margin-bottom: 10px; /* Optional: Add margin at the bottom */
+        height: 1055px; /* Set a fixed height for all boxes */
+    }
+
+    #footer {
+        clear: both;      /*Removes current footer styles*/
+        margin-top: 20px; /* Adds spacing between the footer section and the articles above */
+    }
+
+    #footer-content {
+        display: flex;
+        justify-content: space-between; /*Creates space inbetween the quicklinks and the images*/
+    }
+
+    #footer-images img:first-child {
+        width: 30%;                  /*scales image based on resolution*/
+    }
+    
+    #footer-images img:last-child {
+        width: 40%;                 /*scales image based on resolution*/
+    }
+}
